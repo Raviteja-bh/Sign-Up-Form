@@ -1,44 +1,146 @@
 * {
-    background-color: black;
-    margin:0;
-    padding:0;
+    margin: 0px;
+    padding: 0px;
     box-sizing: border-box;
+    background-color: #121b30;
+    --focus-color: #045c7f;
 }
+
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
 
 body {
     display: flex;
+    height: 100vh;
+
 }
 
 .sadface {
-    display: flex;
-    justify-content: center;
     width: 30%;
+    background-image: url(images/zulmaury-saavedra--Keh6vLM7w0-unsplash.jpg);
+    background-size: cover;
     height: 100vh;
-    background-image: url("images/zulmaury-saavedra--Keh6vLM7w0-unsplash.jpg");
-    background-size:cover;
 }
 
 .logo {
     width: 100%;
+    opacity: 0.2;
     height: 30%;
-    margin-bottom: 10px;
-    opacity: 0.5;
 }
 
-.formDiv {
-    color: white;
-    display: flex;
+#forms {
     width: 70%;
-    justify-content: center;
-    align-items: center;
+    height: 100%;
+    
     border: 2px solid red;
 }
 
-.group-form {
+.custom {
     width: 100%;
-    display: flex;
-    margin: 2rem;
-    justify-content: space-between;
+    height: 100%;
+    gap: 30px;
     border: 2px solid green;
-    padding: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.group {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    margin: 20px;
+    /* border: 1px solid red; */
+}
+
+.innerName {
+    position: relative;
+    width: 250px;
+    /* border: 1px solid red; */
+} 
+
+.innerName input {
+    /* -webkit-appearance: none;
+     height: 100%;
+    -ms-appearance: none;
+    -moz-appearance: none;
+    appearance: none; */
+    width: 100%;
+    padding: 12px;
+    outline: none;
+    border: 2px solid rgba(245, 245, 245, 0.25);
+    border-radius: 5px;
+    color: #fff;
+    height: 4rem;
+    font-size: 1.2rem;
+    transition: 0.8s;
+    
+}
+
+.innerName label {
+    color: whitesmoke;
+    position: absolute;
+    top: 15px;
+    left: 10px;
+    /* padding: 10px; */
+    font-size: 1.5rem;
+    transition: 0.8s;
+}
+
+.innerName input:valid ~ label,
+.innerName input:focus ~ label {
+    
+    color: var(--focus-color);
+    transform: translateX(12px) translateY(-26px);
+    font-size: 1.2rem;
+    padding: 0 10px;
+    border-left: 1px solid var(--focus-color);
+    border-right: 1px solid var(--focus-color);
+    border-radius: 10px;
+}
+
+.innerName input:valid,
+.innerName input:focus {
+    border: 2px solid var(--focus-color)
+}
+
+.btn {
+    position: relative;
+    border: 1px solid var(--focus-color);
+    border-radius: 3px;
+    background: none;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    cursor: pointer;
+    margin: 10px;
+    color: var(--focus-color);
+    z-index: 1;
+    overflow: hidden;
+    transition: 0.9s;
+}
+
+.btn:hover {
+    color: #fff;
+    box-shadow: 2px 5px 3px 3px black;
+}
+
+.btn::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background-color: var(--focus-color);
+    z-index: -1;
+    bottom: 0;
+    border-radius: 50% 50% 0 0;
+    transition: 0.8s;
+    
+}
+
+.btn:hover::before {
+    height: 180%;
 }
