@@ -6,28 +6,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign-Up</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <div class="sadface">
         <img class="logo" src="images/logo-white.png" alt="" srcset="">
+        <div class="credits">Credits: Zulmaury-Saavedra</div>
     </div>
-    <form id="forms" action="#" method="post">
+    <form id="forms" action="/onSuccess.html" method="get">
+        <div class="writer head">
+            <h1 class="heading">Meet Folk</h1>
+        </div>
+        <div class="writer parahead">
+            <p class="para">Feeling alone? Wanna meet a stranger who behaves, lives like you. Then don't worry we got
+                you.<br>Just SignUp we'll find a pair</p>
+        </div>
+
         <div class="custom">
             <div class="group">
                 <div class="innerName">
-                    <input type="text" name="firstName" id="firstName" required="required">
+                    <input type="text" minlength="4" name="firstName" id="firstName" required>
                     <label for="firstName">firstName</label>
                 </div>
                 <div class="innerName">
-                    <input type="text" name="lastName" id="lastName" required="required">
+                    <input type="text" minlength="4" name="lastName" id="lastName" required>
                     <label for="lastName">lastName</label>
                 </div>
             </div>
             <div class="group">
                 <div class="innerName email">
-                    <input type="email" name="email" id="email" required="required">
+                    <input type="email" name="email" id="email" required="required" placeholder="">
                     <label for="email">Email Id</label>
                 </div>
                 <div class="innerName mobile">
@@ -42,16 +54,17 @@
                 </div>
                 <div class="innerName repass">
                     <input type="password" name="repass" id="repass" required="required">
-                    <label for="repass">Confirm Password</label>
+                    <label for="repass" class="repass">Confirm Password</label>
                 </div>
             </div>
-            <div class="group">
+            <div class="group outerbtn">
                 <div class="btnCont">
                     <button class="btn" type="submit">Submit</button>
                 </div>
             </div>
         </div>
     </form>
+
 </body>
 
 </html>
