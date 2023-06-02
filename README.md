@@ -1,1 +1,3 @@
 # Sign-Up-Form
+
+In this web development project,  built Form page using HTML, CSS JavaScript. In this project for validation used few html attributes like required, minLength, max, pattern etc and Coming to the JavaScript I have called elements using DOM method then used addEventListener to listen for event and caught that events with 'invalid' {event.target.validity.valueMissing, for pattern patternMismatch} to set custom message I have used setCustomValidity.
