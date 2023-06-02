@@ -1,28 +1,28 @@
-const firstname = document.querySelector('input[name="firstName"]');
-const lastname = document.querySelector('input[name="lastName"]');
+const fullName = document.querySelector('input[name="fullName"]');
+const gender = document.querySelector('input[name="gender"]');
 const email = document.querySelector('input[name="email"]');
 const mobile = document.querySelector('input[name="tele"]');
 const password = document.querySelector('input[name="pass"]');
 const repassword = document.querySelector('input[name="repass"]');
 
 //firstName validation
-firstname.addEventListener('invalid', function (event) {
+fullName.addEventListener('invalid', function (event) {
     if (event.target.validity.valueMissing) {
         event.target.setCustomValidity('Please tell us how we should address you.');
     }
 });
-firstname.addEventListener('change', function (event) {
+fullName.addEventListener('change', function (event) {
     event.target.setCustomValidity('');
 });
 
 //lastName validation
 
-lastname.addEventListener('invalid', function (event) {
+gender.addEventListener('invalid', function (event) {
     if (event.target.validity.valueMissing) {
         event.target.setCustomValidity('Please let us know your lastName.');
     }
 });
-lastname.addEventListener('change', function (event) {
+gender.addEventListener('change', function (event) {
     event.target.setCustomValidity('');
 });
 
@@ -94,3 +94,10 @@ function validatePassword() {
         return true;
     }
   }
+
+  //gender validation
+  gender.addEventListener('invalid', (event)=> {
+    if(event.target.validity.patternMismatch){
+        gender.setCustomValidity('Please enter Male/Female/Others');
+    }
+  })
