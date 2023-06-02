@@ -94,7 +94,7 @@ body {
     /* border: 1px solid red; */
 } 
 
-.innerName input {
+.innerName input{
     /* -webkit-appearance: none;
      height: 100%;
     -ms-appearance: none;
@@ -138,7 +138,7 @@ body {
 }
 
 .innerName input:valid,
-.innerName input:focus {
+.innerName input:focus{
     border: 2px solid var(--focus-color)
 }
 
@@ -147,7 +147,7 @@ body {
     transform: translateX(-8px) translateY(-25px);
 }
 
-.innerName input:not(placeholder-shown) {
+.innerName input:not(placeholder-shown){
     color: #fff;
     transform: translateX(-12px) translateY(26px);
     font-size: 1.5rem;

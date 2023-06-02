@@ -17,7 +17,7 @@
         <img class="logo" src="images/logo-white.png" alt="" srcset="">
         <div class="credits">Credits: Zulmaury-Saavedra</div>
     </div>
-    <form id="forms" action="/onSuccess.html" method="get">
+    <form id="forms" action="/onSuccess.html" method="get" onsubmit="return validatePassword()" autocomplete="off">
         <div class="writer head">
             <h1 class="heading">Meet Folk</h1>
         </div>
@@ -39,32 +39,32 @@
             </div>
             <div class="group">
                 <div class="innerName email">
-                    <input type="email" name="email" id="email" required="required" placeholder="">
+                    <input type="email" name="email" id="email" required>
                     <label for="email">Email Id</label>
                 </div>
                 <div class="innerName mobile">
-                    <input type="tel" name="tele" id="tele" required="required" minlength="10" maxlength="10">
+                    <input type="tel" name="tele" id="tele" maxlength="10" required="required" pattern="[0-9]{10}">
                     <label for="tele">Mobile</label>
                 </div>
             </div>
             <div class="group">
                 <div class="innerName pass">
-                    <input type="password" name="pass" id="pass" required="required">
+                    <input type="password" name="pass" id="pass" required="required" minlength="6" maxlength="8">
                     <label for="pass">password</label>
                 </div>
                 <div class="innerName repass">
-                    <input type="password" name="repass" id="repass" required="required">
+                    <input type="password" name="repass" id="repass" required="required" oninput="validatePassword()" minlength="6" maxlength="8">
                     <label for="repass" class="repass">Confirm Password</label>
                 </div>
             </div>
             <div class="group outerbtn">
                 <div class="btnCont">
-                    <button class="btn" type="submit">Submit</button>
+                    <button class="btn" id="btn"  type="submit">Submit</button>
                 </div>
             </div>
         </div>
     </form>
-
+    <script src="formJs.js"></script>
 </body>
 
 </html>
